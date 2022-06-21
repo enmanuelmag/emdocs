@@ -8,6 +8,8 @@ Welcome to enmdocs's documentation!
 
 This content is from tag ``v2.0`` (master branch) of the enmdocs project.
 
+New changes
+
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
