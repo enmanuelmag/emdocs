@@ -17,6 +17,9 @@ def html2rst(html):
 HTMLS_PATH = './html'
 OUTPUT_PATH = './source/html'
 
+if not os.path.exists(OUTPUT_PATH):
+  os.makedirs(OUTPUT_PATH)
+
 files = []
 for filename in os.listdir(HTMLS_PATH):
   if filename.endswith('.html'):
