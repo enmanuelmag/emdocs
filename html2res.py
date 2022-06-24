@@ -7,7 +7,7 @@ from pypandoc.pandoc_download import download_pandoc
 download_pandoc()
 
 HTMLS_PATH = './html'
-OUTPUT_PATH = './source/html'
+OUTPUT_PATH = './source'
 
 if not os.path.exists(OUTPUT_PATH):
   os.makedirs(OUTPUT_PATH)
