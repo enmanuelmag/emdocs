@@ -9,8 +9,11 @@ Welcome to enmdocs's documentation!
 This content is from tag ``v2.0`` (master branch) of the enmdocs project.
 
 .. toctree::
+
+.. toctree::
    :maxdepth: 2
    :caption: Contents:
+   html/quasar
 
 
 

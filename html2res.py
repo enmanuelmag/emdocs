@@ -6,14 +6,6 @@ from pypandoc.pandoc_download import download_pandoc
 
 download_pandoc()
 
-
-def html2rst(html):
-  p = subprocess.Popen(
-    ['pandoc', '--from=html', '--to=rst'],
-    stdin=subprocess.PIPE, stdout=subprocess.PIPE
-  )
-  return p.communicate(html)[0]
-
 HTMLS_PATH = './html'
 OUTPUT_PATH = './source/html'
 
@@ -27,6 +19,7 @@ for filename in os.listdir(HTMLS_PATH):
 
 print('\nStarting conversion...')
 
+files_processed = 0
 for file in files:
   print(f'Processing {file}')
 
@@ -35,5 +28,6 @@ for file in files:
   out_path = os.path.join(OUTPUT_PATH, out_name)
 
   rst = pypandoc.convert_file(in_path, 'rst', outputfile=out_path)
+  files_processed += 1
 
-print(f'\nDone. {len(files)} files converted')
+print(f'\nDone. {files_processed} files converted')
